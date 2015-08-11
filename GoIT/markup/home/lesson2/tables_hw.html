@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        table { border-collapse: collapse; width: 500px; height: 500px; border: 6px solid white; }
+        td { border: 5px solid #000; }
+
+        #trsmall {
+            height: 30px;
+            width: 100px;
+        }
+        #black{
+            background-color: #000000;
+        }
+        #blue{
+            background-color:#074481;
+        }
+        #red{
+            background-color:#ff5b2d;
+        }
+        #yellow{
+            background-color:#fffa69;
+        }
+    </style>
+</head>
+<body>
+<table >
+    <tr id="tr">
+        <td colspan="2"></td><td colspan="3"></td><td colspan="2" id="yellow"></td>
+    </tr>
+    <tr id="tr">
+        <td rowspan="2"></td><td colspan="4" rowspan="4" id="red"></td><td colspan="2" rowspan="2" id="yellow"></td>
+    </tr>
+
+    <tr id="tr">
+
+    </tr >
+
+    <tr id="tr">
+        <td rowspan="3"></td><td></td><td></td>
+    </tr>
+
+    <tr id="tr">
+        <td></td><td></td>
+    </tr>
+
+    <tr id="tr">
+        <td id="black"></td><td id="black"></td><td colspan="2"></td><td colspan="2"></td>
+    </tr>
+
+    <tr id="tr">
+        <td rowspan="3" id="yellow"></td><td id="black"></td><td id="black"></td><td colspan="2">
+    </td><td colspan="2" rowspan="2" id="blue"></td>
+    </tr>
+
+    <tr id="trsmall">
+        <td colspan="2" rowspan="2"></td><td id="black"></td> <td id="black"></td>
+    </tr>
+
+    <tr id="trsmall">
+        <td   colspan="4"></td>
+    </tr>
+</table>
+</body>
+</html>
