@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+    <style>
+        body {font-weight="bold";}
+    </style>
+
+</head>
+<body>
+<form action="" >
+
+    <p><b>Name</b><br/><input type="text" name="name"></p>
+
+    <p>Email<br/>
+        <input type="email" name="email"></p>
+        <p>Sex</br>
+            <input type="radio" name="sex" id="male" value="male"><label for="male">Male</label>
+            <input type="radio" name="sex" id="female" value="female"><label for="female">Female</label></p>
+
+
+    <p>Current status <br/><input type="checkbox" name="Student"id="student" value="S"><label for="student">Student</label><br/>
+        <input type="checkbox" name="Employed" id="employed" value="E"><label for="employed">Employed</label><br/>
+        <input type="checkbox" name="Unemployed" id="unemployed" value="U"><label for="unemployed">Unemployed</label>
+    </p>
+    <br>Month and Year of birth:<br/>
+   <input type="month">
+
+
+
+
+<p>Skills and Technologies<br/>
+    <select name="Skills" font-size="8px" size="10">
+    <optgroup label="Tech skills">
+        <option  value="s1">HTML</option>
+        <option value="s2">CSS</option>
+        <option value="s3">JavaScript</option>
+        <option value="s4">git</option>
+    </optgroup>
+    <optgroup label="Soft skills">
+        <option  value="ss1">Time management</option>
+        <option value="ss2">Proactivy</option>
+        <option value="ss3">Teamwork</option>
+        <option value="ss4">Leadership</option>
+    </optgroup>
+    </select></p><br/>
+
+    Photo<br/><input type="file"name="image"/>
+
+    <p>Comments<br/> <textarea name="comments" rows="4"></textarea></p>
+
+    <p><input type="submit" name="Submit" value="Save" border-radius="2px"></p>
+
+    
+
+
+
+</form>
+</body>
+</html>
