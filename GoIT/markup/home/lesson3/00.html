@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
     <style>
-        a[href^="http"]{color: #f70}
-        a[href*="google"] {color: #666}
-        a[target="_blank"]:after {content: "\21f1";}
-        a[target="_blank"] {text-decoration: none}
+        a[href^="http://"],
+        a[href^="https://"] {
+        color: #f70;
+        }
+
+        a[href*="google"] {
+        color: #666;
+        }
+
+        a[target="_blank"]:after {
+        display: inline-block;
+        position: relative;
+        left: 7px;
+        bottom: -4px;
+        content: "\21F1";
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        }
+
     </style>
+    <title></title>
 </head>
 <body>
-
 <div>
     <ul>
         <li><a href="/">Главная</a></li>
@@ -24,6 +40,5 @@
         <li><a href="http://news.google.com">Google News</a></li>
     </ul>
 </div>
-
 </body>
 </html>
