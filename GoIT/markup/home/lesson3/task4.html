@@ -6,8 +6,10 @@
     <style>
         a[href^="http"]{color: #f70}
         a[href*="google"] {color: #666}
-        a[target="_blank"]:after {content: "\21f1";}
-        a[target="_blank"] {text-decoration: none}
+        a[class="strelka"]:after {content:  "\2197"; color: orange }
+
+        .strelka {border-top: 1px solid orange; border-right: 1px solid orange}
+
     </style>
 </head>
 <body>
@@ -18,7 +20,7 @@
         <li><a href="/news">Новости</a></li>
         <li><a href="http://ya.ru">Яндекс</a></li>
         <li><a href="https://mail.ya.ru">Яндекс.Почта</a></li>
-        <li><a href="http://maps.yandex.ru" target="_blank">Яндекс.Почта</a></li>
+        <li><a href="http://maps.yandex.ru" target="_blank">Яндекс.Почта </a><a class="strelka"></a></li>
         <li><a href="http://google.com">Google</a></li>
         <li><a href="http://maps.google.com">Google Maps</a></li>
         <li><a href="http://news.google.com">Google News</a></li>
