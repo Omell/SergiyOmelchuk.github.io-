@@ -4,37 +4,46 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
+        body { margin: 0 auto}
         li {
             display: inline-block;
-            font-family:Arial;
+            font-family: Arial;
             font-size: 8px;
-            color:#a23bd2;
-            background-color:#fafafa;
-            border: 1px;
-            border-radius: 1px;
-            border-color: #7c12bc;
-            padding: 8px;
+            color: #a23bd2;
+            background-color: #fafafa;
             text-transform: uppercase;
             text-decoration: none;
             font-weight: bold;
+        }
+        .num {
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            border-color: #dddddd;
+            padding: 6px 8px;
+        }
+        .num:hover {background-color:#a13bcf; color:white; border-color:#7c12bc}
+        .point {vertical-align: bottom; margin: 0 9px}
+        .word1 {margin: 0 8px 0 11px}
+        .word2 {margin: 0 11px 0 8px}
+
 
     </style>
 </head>
 <body>
 <div>
     <ul>
-    <li><< first</li>
-    <li><< prev</li>
-    <li>1</li>
-    <li>2</li>
-    <li>...</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li>next >></li>
-    <li>last >></li>
+    <li class="word2"><< first</li>
+    <li class="word1"><< prev</li>
+    <li class="num">1</li>
+    <li class="num">2</li>
+    <li class="point">...</li>
+    <li class="num">5</li>
+    <li class="num">6</li>
+    <li class="num">7</li>
+    <li class="num">8</li>
+    <li class="num">9</li>
+    <li class="word2">next >></li>
+    <li class="word1">last >></li>
     </ul>
 
 
