@@ -4,64 +4,138 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        * {margin: 0 auto}
-        div { background-color:#a64dff;  text-align: center}
-        ul {width: 900px;}
-        li {display: inline-block;  padding: 11px; vertical-align: }
-        .menu {
+        * {
+            margin: 0;
+            padding:0;
+            text-decoration:none;
+        }
+        .container {
+            background-color:#a64dff;
+        }
+        ul {
+            margin: 0 auto;
+            position:relative;
+        }
+        li {
             display: inline-block;
-            font-family:Impact;
+            padding: 11px 10px;
+        }
+        .menu{
             font-size: 18px;
             color: white;
-            background-color:#a64dff;
-            padding: 11px;
             text-transform: uppercase;
-            text-decoration: none;
-
-        }
-        #menu2 {
-            display: inline-block;
             font-family:Impact;
-            font-size: 11px;
-            color: #aa8899;
-            background-color:#eeeeee;
-            padding: 11px;
-            text-transform: uppercase;
-            text-decoration: none;
-            visibility: hidden;
-
+            width:900px;
         }
-        li:hover {  background-color:#eeeeee; color: #a0a0a8; }
-        .menu > li:hover #menu2 {visibility: visible}
+        li:hover {
+            background-color:#eeeeee;
+            color: #a0a0a8;
+        }
+        .menu2 {
+            display: none;
+            width:100%;
+            position:absolute;
+            top:44px;
+            left:0;
+            font-size: 11px;
+            color:#878687;
+            font-family:Arial;
+            background-color:#eeeeee;
+            background-size:200%;
+            text-transform:none;
+            text-align:left;
+        }
+        li:hover ul {
+            display:block;
+        }
+        }
     </style>
 </head>
 <body>
-<hr size=1px" color="#f2f2f2"/>
-<hr size=1px" color="#edefee"/>
-<hr size=1px" color="#e2e2e2"/>
-<div>
+<div class="container">
     <ul class="menu">
-        <li>home</li>
-        <li>news</li>
-        <li>economics</li>
-        <li>local</li>
-        <li>sport</li>
-        <li>culture</li>
-        <li>travels</li>
+        <li><a>home</a>
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li><a>news</a>
+            <ul class="menu2">
+                <li>Today</li>
+                <li>Yesterday</li>
+                <li>Other</li>
+            </ul>
+        </li>
+        <li>economics
+            <ul class="menu2">
+                <li>Good</li>
+                <li>Bad</li>
+                <li>Other</li>
+            </ul>
+        </li>
+        <li>local
+            <ul class="menu2">
+                <li>Verylocal</li>
+                <li>No local</li>
+                <li>Big local</li>
+            </ul>
+        </li>
+        <li>sport
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li>culture
+            <ul class="menu2">
+                <li>Good1</li>
+                <li>Good2</li>
+                <li>Good2</li>
+            </ul>
+        </li>
+        <li>travels
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li>living
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li>money
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li>technology
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+        <li>more
+            <ul class="menu2">
+                <li>Home</li>
+                <li>Aboute</li>
+                <li>Contact</li>
+            </ul>
+        </li>
     </ul>
 </div>
-<hr size=2px" color="#edefee"/>
-<hr size=1px" color="#f2f2f2"/>
-<div id="menu2">
-    <ul >
-        <li>home</li>
-        <li>news</li>
-        <li>economics</li>
-        <li>local</li>
-        <li>sport</li>
-        <li>culture</li>
-        <li>travels</li>
-    </ul>
+
+
+
 </div>
 
 </body>
