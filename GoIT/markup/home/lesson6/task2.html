@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .container {
+            font-family: "Trebuchet MS " Arial;
+            background-image: url("background.png");
+            background-size: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .header {
+            color: #3170a8;
+            font-size: 40px;
+            text-transform: uppercase;
+            padding: 50px 0;
+        }
+        header span {
+            color: #ee8129;
+        }
+        .box {
+            display: inline-block;
+            margin-bottom: 50px;
+            margin-left: 20px ;
+            margin-right: 20px ;
+            position: relative;
+        }
+        .box_face {
+            height: 100px;
+            width: 100px;
+            vertical-align: top;
+            display: inline-block;
+        }
+        .box_text {
+            display: inline-block;
+            width: 320px;
+            height: 100px;
+            background-color: white;
+            font-size: 13px;
+            color: #3070a8;
+            font-family: "Trebuchet MS Italic" Arial;
+            padding: 10px 15px;
+            overflow: hidden;
+            margin-left: 25px;
+            box-sizing: border-box;
+        }
+        .box_img {
+            position: absolute;
+            left: 115px;
+            top: 36px;
+        }
+        div p {
+            color: #666666;
+            font-style: normal;
+        }
+        .box_header {
+            font-style: italic;
+            border-bottom: 1px dotted #666666;
+            text-align: justify;
+            height: 25px;
+            overflow: hidden;
+        }
+        .box_text div:first-child {
+            float: left;
+        }
+        .box_text div:nth-child(2) {
+            float: right;
+        }
+        .box_header div:first-child:before {
+            content: "- ";
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <span>What</span> Client Says
+    </header>
+
+        <div class="box">
+           <img src="customer1.png" class="box_face">
+            <div class="box_text">
+                <header class="box_header">
+                    <div>Staciya Trollio</div>
+                    <div>Customer</div>
+                </header>
+                <p>Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+                <img src="strelka.png" class="box_img">
+            </div>
+        </div>
+        <div class="box">
+            <img src="customer2.png" class="box_face">
+            <div class="box_text">
+                <header class="box_header">
+                    <div>David Soul</div>
+                    <div>Customer</div>
+                </header>
+                <p>Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+                <img src="strelka.png" class="box_img">
+            </div>
+        </div>
+</div>
+</body>
+</html>
