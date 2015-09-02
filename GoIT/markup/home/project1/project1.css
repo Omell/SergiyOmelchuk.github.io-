@@ -1,0 +1,76 @@
+* {
+    margin: 0 auto;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+.header {
+    width: 1000px;
+    background-color: white;
+    background-size: 100%;
+    height: 98px;
+}
+.header_tittle {
+    font-family: "Myriad Pro";
+    font-size: 36px;
+    color:#ee8129 ;
+    float: left;
+    margin-top: 45px;
+}
+.header_tittle span {
+    text-transform: uppercase;
+    color: #3070a8;
+}
+.header_menu{
+    text-transform: uppercase;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    color: #3070a8;
+    float: right;
+}
+.header_menu li {
+    display: inline-block;
+    padding: 15px 15px;
+    margin-top: 45px;
+}
+.header_menu li:hover {
+    border-bottom: 5px solid #3070a8;
+}
+.button {
+    background-image: url("baner_background.png");
+    background-size: 100% cover;
+    height: 585px;
+    width: 1000px;
+    text-align: center;
+    font-family: "Myriad Pro";
+    color: white;
+}
+.button_h2 {
+    font-size: 36px;
+    padding-top: 150px;
+}
+.button_h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+.button_p {
+    font-family: Calibri;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+.button_button {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: #99a9b5 solid 1px;
+    padding: 23px;
+    width: 247px;
+    margin-bottom: 105px;
+}
+.button_button:hover {
+    border-bottom: #99a9b5 solid 3px;
+    border-right: #99a9b5 solid 3px;
+    padding-left: 25px;
+    text-shadow: aliceblue 2px 2px  5px;
+}
