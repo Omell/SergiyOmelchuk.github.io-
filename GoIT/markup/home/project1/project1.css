@@ -38,9 +38,9 @@
 }
 .button {
     background-image: url("baner_background.png");
-    background-size: 100% cover;
+    background-size: 1400px cover;
+    width: 1400px;
     height: 585px;
-    width: 1000px;
     text-align: center;
     font-family: "Myriad Pro";
     color: white;
