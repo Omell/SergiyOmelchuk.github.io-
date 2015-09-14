@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            font-family: Arial;
+            margin: 0;
+            padding: 0 0 ;
+            box-sizing: border-box;
+        }
+        .tittle {
+            color:orange;
+            font-size:45px;
+            display: block;
+        }
+        .block {
+            vertical-align: middle;
+            display: inline-block;
+            width: 50%;
+            padding: 0 0 30px 0;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .block:nth-child(2n) {
+            padding-right: 20px;
+        }
+        .block:nth-child(2n+1) {
+            padding-left: 20px;
+        }
+        .block_left {
+            display: inline-block;
+        }
+        .block_left img {
+            height: 85px;
+            width: 85px;
+        }
+        .block_right {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .block_right p {
+            font-size: 14px;
+            line-height: 2em;
+            margin-left: 115px;
+        }
+        .block_right h1 {
+            font-size: 22px;
+            margin-left: 115px;
+        }
+    </style>
+</head>
+<body>
+<tittle class="tittle">Test</tittle>
+<div class="block ">
+    <div class="block_left"><img src="http://lorempixel.com/85/85/people" alt=""/></div>
+    <div class="block_right">
+        <h1>Very interesting text</h1>
+        <p>Lorem ips um dolor sit amet,co um dolor sit amet,consectetur adipisicing elit. Accusamus aut doloremqu</p>
+    </div>
+
+</div>
+
+<div class="block">
+    <div class="block_left"><img src="http://lorempixel.com/85/85/people" alt=""/></div>
+    <div class="block_right">
+        <h1>Very interesting text</h1>
+
+        <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Accusamus aut doloremqu</p>
+    </div>
+</div>
+
+<div class="block">
+<div class="block_left"><img src="http://lorempixel.com/85/85/people" alt=""/></div>
+    <div class="block_right">
+        <h1>Very interesting text</h1>
+
+        <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Accusamus aut doloremqu</p>
+    </div>
+
+</div>
+
+<div class="block">
+    <div class="block_left"><img src="http://lorempixel.com/85/85/people" alt=""/></div>
+    <div class="block_right">
+        <h1>Very interesting text</h1>
+        <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. </p>
+    </div>
+
+</div>
+
+</body>
+</html>

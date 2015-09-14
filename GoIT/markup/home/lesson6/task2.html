@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        .container {
+        .testimonials {
             font-family: "Trebuchet MS " Arial;
             background-image: url("background.png");
             background-size: 100%;
@@ -13,29 +13,29 @@
             box-sizing: border-box;
             text-align: center;
         }
-        .header {
+        .testimonials_header {
             color: #3170a8;
             font-size: 40px;
             text-transform: uppercase;
             padding: 50px 0;
         }
-        header span {
+        .testimonials_header span {
             color: #ee8129;
         }
-        .box {
+        .testimonials_box {
             display: inline-block;
             margin-bottom: 50px;
             margin-left: 20px ;
             margin-right: 20px ;
             position: relative;
         }
-        .box_face {
+        .testimonials_box_face {
             height: 100px;
             width: 100px;
             vertical-align: top;
             display: inline-block;
         }
-        .box_text {
+        .testimonials_box_text {
             display: inline-block;
             width: 320px;
             height: 100px;
@@ -48,29 +48,29 @@
             margin-left: 25px;
             box-sizing: border-box;
         }
-        .box_img {
+        .testimonials_box_img {
             position: absolute;
             left: 115px;
             top: 36px;
         }
-        div p {
+        .testimonials div p {
             color: #666666;
             font-style: normal;
         }
-        .box_header {
+        .testimonials_box_header {
             font-style: italic;
             border-bottom: 1px dotted #666666;
             text-align: justify;
             height: 25px;
             overflow: hidden;
         }
-        .box_text div:first-child {
+        .testimonials_box_text div:first-child {
             float: left;
         }
-        .box_text div:nth-child(2) {
+        .testimonials_box_text div:nth-child(2) {
             float: right;
         }
-        .box_header div:first-child:before {
+        .testimonials_box_header div:first-child:before {
             content: "- ";
         }
 
@@ -78,33 +78,33 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <header class="header">
+<div class="testimonials">
+    <header class="testimonials_header">
         <span>What</span> Client Says
     </header>
 
-        <div class="box">
-           <img src="customer1.png" class="box_face">
-            <div class="box_text">
-                <header class="box_header">
+        <div class="testimonials_box">
+           <img src="customer1.png" class="testimonials_box_face">
+            <div class="testimonials_box_text">
+                <header class="testimonials_box_header">
                     <div>Staciya Trollio</div>
                     <div>Customer</div>
                 </header>
                 <p>Lorem Ipsum is simply dummy text of the printing
                     and industry. Lorem Ipsum has been the industry.</p>
-                <img src="strelka.png" class="box_img">
+                <img src="strelka.png" class="testimonials_box_img">
             </div>
         </div>
-        <div class="box">
-            <img src="customer2.png" class="box_face">
-            <div class="box_text">
-                <header class="box_header">
+        <div class="testimonials_box">
+            <img src="customer2.png" class="testimonials_box_face">
+            <div class="testimonials_box_text">
+                <header class="testimonials_box_header">
                     <div>David Soul</div>
                     <div>Customer</div>
                 </header>
                 <p>Lorem Ipsum is simply dummy text of the printing
                     and industry. Lorem Ipsum has been the industry.</p>
-                <img src="strelka.png" class="box_img">
+                <img src="strelka.png" class="testimonials_box_img">
             </div>
         </div>
 </div>
