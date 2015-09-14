@@ -10,6 +10,10 @@ body {
 }
 .forma_gradient {
     background: -webkit-linear-gradient(left,#ffcc10, #ee8129);
+    background: -moz-linear-gradient(left,#ffcc10, #ee8129);
+    background: -o-linear-gradient(left,#ffcc10, #ee8129);
+    background: -ms-linear-gradient(left,#ffcc10, #ee8129);
+    background: linear-gradient(left,#ffcc10, #ee8129);
 }
 .forma_findLine {
     position: absolute;
