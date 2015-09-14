@@ -4,10 +4,12 @@ body {
 .forma {
     height: 52px;
     max-width: 545px;
-    background-col0-or: #ffcc66;
+    background-color: #ffcc66;
     font-family: Arial;
     position: relative;
-    background: -webkit-linear-gradient(left,#ffcc66, #ffcc10);
+}
+.forma_gradient {
+    background: -webkit-linear-gradient(left,#ffcc10, #ee8129);
 }
 .forma_findLine {
     position: absolute;
@@ -38,9 +40,12 @@ body {
 .forma:after {
     content: " ";
     border:26px solid transparent;
-    border-left:26px solid #ffcc10 ;
+    border-left:26px solid #ffcc66 ;
     position: absolute;
     left: 100%;
+}
+.forma_gradient:after {
+    border-left:26px solid  #ee8129 ;
 }
 p {
     left: 4px;
