@@ -144,7 +144,7 @@
 .pricing {
     text-align: center;
     vertical-align: middle;
-    margin-top: 10px;
+    margin: 75px auto;
 }
 .pricing_title{
     font-size: 30px;
@@ -152,7 +152,6 @@
     font-weight: bold;
     color:#41525c;
     text-transform: uppercase;
-    margin: 60px 0;
     text-align: center;
 
 }
@@ -163,6 +162,7 @@
     border-radius: 3px;
     display: inline-block;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 60px;
 }
 .pricing_box_left {
     height: 445px;
@@ -229,6 +229,14 @@
     border-bottom: 3px solid #3371a6;
     color:white;
 }
+.pricing_footer_center {
+    background-color: #ee8129;
+    border-bottom: 3px solid #b3560b;
+}
+.pricing_footer_center:hover {
+    border-bottom: 3px solid #ee8129;
+    color:white;
+}
 .pricing_textPrice {
     height: 155px;
     font-family: "Trebuchet MS" Arial;
@@ -263,3 +271,127 @@
 .pricing_text4 img {padding-right: 18px}
 .backgroundBlue {background-color:#edf5fd;}
 .backgroundGrey {background-color:#f5f5f6;}
+.testimonials {
+    font-family: "Trebuchet MS " Arial;
+    background-image: url("img/testimonials/testimonials_background.png");
+    background-size: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.testimonials_header {
+    color: #3170a8;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+.testimonials_header span {
+    color: #ee8129;
+}
+.testimonials_box {
+    display: inline-block;
+    padding-bottom: 50px;
+    margin-left: 20px ;
+    margin-right: 20px ;
+    position: relative;
+}
+.testimonials_box_face {
+    height: 100px;
+    width: 100px;
+    vertical-align: top;
+    display: inline-block;
+}
+.testimonials_box_text {
+    display: inline-block;
+    width: 320px;
+    height: 100px;
+    background-color: white;
+    font-size: 13px;
+    color: #3070a8;
+    font-family: "Trebuchet MS Italic" Arial;
+    padding: 10px 15px;
+    overflow: hidden;
+    margin-left: 25px;
+    box-sizing: border-box;
+}
+.testimonials_box_img {
+    position: absolute;
+    left: 115px;
+    top: 36px;
+}
+.testimonials div p {
+    color: #666666;
+    font-style: normal;
+}
+.testimonials_box_header {
+    font-style: italic;
+    border-bottom: 1px dotted #666666;
+    text-align: justify;
+    height: 25px;
+    overflow: hidden;
+}
+.testimonials_box_text div:first-child {
+    float: left;
+
+}
+.testimonials_box_text div:nth-child(2) {
+    float: right;
+    margin-right: 5px;
+}
+.testimonials_box_header div:first-child:before {
+    content: "- ";
+}
+.footer {
+    position: relative;
+    margin: 0 auto;
+}
+.footer_contacts {
+    position: absolute;
+    top: 45px;
+    left: 250px;
+    width: 500px;
+    color: #666666;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+.footer_images {
+    position: absolute;
+    left: 190px;
+    top: 45px;
+}
+.footer_images_phone {
+    top: 155px;
+}
+.footer_images_mail {
+    top: 192px;
+}
+.footer_images_social {
+    top: 225px;
+}
+
+.footer_rightBlock {
+    width: 650px;
+    height: 350px;
+    position: absolute;
+    left: 340px ;
+    top:0;
+   }
+.footer_footer {
+    position: absolute;
+    top: 350px;
+    left:0;
+    font-size: 14px;
+    color: white;
+    background-color: #3070a8;
+    text-align: center;
+    height: 105px;
+    vertical-align: middle;
+    line-height: 2em;
+    padding-top: 25px;
+    width: 100%;
+}
+.footer_footer span {
+    color: #1d1c1c;
+}
