@@ -3,17 +3,28 @@ body {
 }
 
 .container {
+    position: relative;
     width: 972px;
     background-color: white;
     margin: 0 auto;
     padding: 0 20px;
     border-radius: 3px;
-    box-shadow: 0 0 1px rgba(0,0,0,0.5),
-    0 1px 0 0 white,
-    0 2px 0 0 #e9e9e9,
-    0 3px 0 0 white,
-    0 4px 0 0 #e9e9e9;
+    box-shadow: 0 0 0 1px #e9e9e9,
+    0 2px 0 0 white,
+    0 3px 0 0 #e9e9e9,
+    0 4px 0 0 white,
+    0 5px 0 0 #e9e9e9;
     box-sizing: border-box;
+}
+.container:after {
+    content: "";
+    position: absolute;
+    top: 97.5%;
+    left:0;
+    background-image: url("images/footer_shadow.png");
+    width: 972px;
+    height: 65px;
+    z-index: -2;
 }
 .header {
     position: relative;
@@ -169,6 +180,7 @@ body {
     height: 260px;
     width: 932px;
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 22px;
 }
 .slider_image {
     position: absolute;
@@ -234,13 +246,19 @@ body {
     z-index: 4;
 }
 .slider_image_buttonRight:hover, .slider_image_buttonLeft:hover  {
-    box-shadow: 1px 1px 2px 0 white;
-}
+     box-shadow: 1px 1px 1px 0 white;
+ }
 #slider_image_buttonLeft:checked ~ .slider_image_image1 {
     z-index: 2;
 }
 #slider_image_buttonRight:checked ~ .slider_image_image2 {
     z-index: 3;
+}
+.slider_image_buttonRight:hover {
+    background-image: url("images/slider/slider_image_buttonRight_hover.png");
+}
+.slider_image_buttonLeft:hover {
+    background-image: url("images/slider/slider_image_buttonLeft_hover.png");
 }
 .slider_tittle {
     font-size: 38px;
@@ -309,6 +327,7 @@ body {
 }
 .articles {
     height: 390px;
+    margin-bottom: 32px;
 }
 .articles_tittle {
     font-size: 18px;
@@ -370,7 +389,7 @@ body {
 .articles_article_imageButtons_download {
     position: absolute;
     top: 60px;
-    left:90px;
+    left:81px;
 }
 .articles_article_imageButtons_zoom {
     position: absolute;
@@ -380,7 +399,7 @@ body {
 .articles_article_imageButtons_square {
     position: absolute;
     top: 60px;
-    left:168px;
+    left:177px;
 }
 .articles_article_imageButtons {
     height: 36px;
@@ -391,10 +410,6 @@ body {
     width: 62px;
     margin-top:-13px;
     margin-left: -13px;
-    padding-left:0;
-}
-.articles_image:hover {
-    opacity: 0.5;
 }
 .articles_image:hover + .articles_article_imageButtonsBlock {
     visibility: visible;
@@ -405,6 +420,7 @@ body {
 .tabs {
     font-family: Arial;
     font-size:14px;
+    margin-bottom: 32px;
 }
 .tabs input {
     display: none;
@@ -424,9 +440,6 @@ body {
 }
 #tab3:checked ~ .tabs_tab3 {
     display: block;
-}
-.tabs hr {
-    width: 891px;
 }
 .tabs_tittle{
     font-family: "Oxygen";
@@ -454,13 +467,22 @@ body {
     line-height: 1em;
     box-sizing: border-box;
    }
-#tab1:checked ~ .tabs_tabNameBlock {
+#tab1:checked ~ .tabs_tabNameBlock li:nth-child(1) {
+    background-color: white;
+    padding-bottom: 16px;
+}
+#tab2:checked ~ .tabs_tabNameBlock li:nth-child(2) {
+    background-color: white;
+    padding-bottom: 16px;
+}
+#tab3:checked ~ .tabs_tabNameBlock li:nth-child(3) {
     background-color: white;
     padding-bottom: 16px;
 }
 
 .tabs_tabDescription {
-    margin-left: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
 .tabs_tabMenu {
     width: 290px;
@@ -529,8 +551,15 @@ body {
     padding: 9.5px 0;
     line-height: 1em;
 }
+.footer_blockText a {
+    color: inherit;
+    text-decoration: none;
+}
 .footer_blockText:last-child {
     border-bottom: none;
+}
+.footer_blockText:hover {
+    font-weight: bold;
 }
 .footer_blockRight {
     display: inline-block;
@@ -561,6 +590,7 @@ body {
 }
 .footer_blockRightTextTittle a:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
 .footer_blockRightTextSmall {
     color: #aaaaaa;
