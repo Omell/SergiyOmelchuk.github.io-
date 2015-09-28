@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/exam.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.307692">
-              <caret line="255" column="52" selection-start-line="255" selection-start-column="52" selection-end-line="255" selection-end-column="52" />
+              <caret line="243" column="28" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="40" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="exam.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exam.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1962482">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.8239538">
+              <caret line="535" column="1" selection-start-line="535" selection-start-column="1" selection-end-line="535" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -467,7 +467,7 @@
     <entry file="file://$PROJECT_DIR$/exam.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.307692">
-          <caret line="255" column="52" selection-start-line="255" selection-start-column="52" selection-end-line="255" selection-end-column="52" />
+          <caret line="243" column="28" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="40" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -479,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exam.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1962482">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.8239538">
+          <caret line="535" column="1" selection-start-line="535" selection-start-column="1" selection-end-line="535" selection-end-column="1" />
           <folding />
         </state>
       </provider>

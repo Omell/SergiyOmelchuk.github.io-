@@ -5,8 +5,7 @@ body {
     position: relative;
     width: 972px;
     background-color: white;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 60px auto;
     padding: 0 20px;
     border-radius: 3px;
     box-shadow: 0 0 0 1px #e9e9e9,
@@ -307,7 +306,7 @@ body {
     background-color: #ffba42;
     position: absolute;
     right: 70px;
-    bottom: 90px;
+    bottom: 80px;
     border: 1px solid #efb74c;
     border-radius: 2px;
     box-sizing: border-box;
@@ -346,6 +345,14 @@ body {
  }
 .slider_button:hover {
     box-shadow: 1px 1px 1px ;
+}
+.slider_button:after {
+    content: "";
+    border-top: 1px solid #e5e5e5;
+    position: absolute;
+    top: -12px;
+    right: -5px;
+    width: 485px;
 }
 .articles {
     height: 390px;
@@ -512,13 +519,20 @@ body {
     margin-left: 20px;
 }
 .tabs_tabMenu ul {
-    list-style-image: url("images/Tabs/tabs_tabMenu_marker.png");
+    list-style-image: url("images/tabs/tabs_tabMenu_marker.png");
     font-size: 12px;
     padding-left: 12px;
     margin-top: 12px;
 }
 .tabs_tabMenu ul li {
     padding-bottom: 4px;
+}
+.tabs_tabMenu a {
+    color: inherit;
+    text-decoration: none;
+}
+.tabs_tabMenu li:hover {
+    font-weight: bold;
 }
 .tabs_tabSection {
     width: 290px;
