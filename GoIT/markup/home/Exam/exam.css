@@ -555,11 +555,15 @@ body {
     color:#999999;
     line-height: 1.5em;
     vertical-align: top;
+    margin-top: 0;
     }
 .tabs_tabSection_text b {
     color: #333333;
     line-height: 1em;
     vertical-align: top;
+}
+.tabs_tabSection_text p {
+    margin: 0;
 }
 .footer {
     font-family: Arial;
