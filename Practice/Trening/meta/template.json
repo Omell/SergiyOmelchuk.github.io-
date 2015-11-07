@@ -1,0 +1,90 @@
+{
+    "id": "4338",
+    "name": "Three Tips Webinar Registration Page",
+    "mobile": true,
+    "notes": "Final QA changes 1.08",
+    "syntax": 4,
+    "version": 1.08,
+    "style": {
+        "replacements": [
+            {"type": "color", "find": "#0bc0ad", "name": "Accent Color"},
+            {"type": "color", "find": "#feffff", "name": "Button Text"},
+            {"type": "color", "find": "#26a194", "name": "Button Hover"},
+            {"type": "color", "find": "#fffffe", "name": "Header Background"},
+            {"type": "color", "find": "#cccccd", "name": "Banner Background (No Image)"},
+            {"type": "color", "find": "#000001", "name": "Intro Box"},
+            {"type": "color", "find": "#fffeff", "name": "Intro Text"},
+            {"type": "color", "find": "#272c2e", "name": "Details Background"},
+            {"type": "color", "find": "#fffefe", "name": "Details Text"},
+            {"type": "color", "find": "#0bc0ae", "name": "Countdown Background"},
+            {"type": "color", "find": "#fefefe", "name": "Countdown Text"},
+            {"type": "color", "find": "#272c2d", "name": "Number Background"},
+            {"type": "color", "find": "#fefffe", "name": "Number Text"},
+            {"type": "color", "find": "#f6f6f7", "name": "Content Background"},
+            {"type": "color", "find": "#222221", "name": "Content Text"},
+            {"type": "color", "find": "#fefeff", "name": "Tip Background"},
+            {"type": "color", "find": "#ebebec", "name": "Tip Border"},
+            {"type": "color", "find": "#272d2e", "name": "Footer Background"},
+            {"type": "color", "find": "#fefefd", "name": "Footer Text Color"}
+        ]
+    },
+    "elements": [
+        {"id": "header", "name": "Header", "type": "container"},
+        {"id": "logo", "type": "image-link", "name": "Logo"},
+
+
+        {"id": "intro", "name": "Intro", "type": "container"},
+        {"id": "background", "name": "Banner Image", "type": "background-image"},
+        {"id": "intro-content", "name": "Intro Box", "type": "container"},
+        {"id": "intro-bg", "name": "Intro Box Background", "type": "container"},
+        {"id": "intro-subtitle", "name": "Subtitle", "type": "text"},
+        {"id": "intro-title", "name": "Title", "type": "text"},
+        {"id": "intro-text", "name": "Text", "type": "text"},
+        {"id": "intro-btn", "name": "Call to Action", "type": "link", "data": {"href": "#/optin"} },
+        {"id": "intro-disclaimer", "name": "Disclaimer", "type": "text"},
+
+
+        {"id": "details", "name": "Details", "type": "container"},
+        {"id": "detail-1", "name": "Detail #1", "type": "container"},
+        {"id": "detail-1-img", "name": "Image #1", "type": "image", "data": { "max-width": 80 } },
+        {"id": "detail-1-title", "name": "Title", "type": "text"},
+        {"id": "detail-1-text", "name": "Text", "type": "text"},
+        {"id": "detail-2", "name": "Detail #2", "type": "container"},
+        {"id": "detail-2-img", "name": "Image", "type": "image", "data": { "max-width": 80 } },
+        {"id": "detail-2-title", "name": "Title", "type": "text"},
+        {"id": "detail-2-text", "name": "Text", "type": "text"},
+
+
+        {"id": "countdown", "name": "Countdown", "type": "container"},
+        {"id": "countdown-title", "name": "Title", "type": "text"},
+        {"id": "countdown-timer", "name": "Timer", "type": "countdown"},
+        {"id": "days-text", "name": "Days", "type": "text"},
+        {"id": "hours-text", "name": "Hours", "type": "text"},
+        {"id": "minutes-text", "name": "Minutes", "type": "text"},
+        {"id": "seconds-text", "name": "Seconds", "type": "text"},
+
+
+        {"id": "content", "name": "Content", "type": "container"},
+        {"id": "content-title", "name": "Title", "type": "text"},
+        {"id": "tips", "name": "Tips", "type": "container"},
+        {"id": "tip-1", "name": "Tip #1", "type": "container"},
+        {"id": "tip-1-img", "name": "Image", "type": "image", "data": { "max-width": 768 } },
+        {"id": "tip-1-title", "name": "Title", "type": "text"},
+        {"id": "tip-1-text", "name": "Text", "type": "text"},
+        {"id": "tip-2", "name": "Tip #2", "type": "container"},
+        {"id": "tip-2-img", "name": "Image", "type": "image", "data": { "max-width": 768 } },
+        {"id": "tip-2-title", "name": "Title", "type": "text"},
+        {"id": "tip-2-text", "name": "Text", "type": "text"},
+        {"id": "tip-3", "name": "Tip #3", "type": "container"},
+        {"id": "tip-3-img", "name": "Image", "type": "image", "data": { "max-width": 768 } },
+        {"id": "tip-3-title", "name": "Title", "type": "text"},
+        {"id": "tip-3-text", "name": "Text", "type": "text"},
+        {"id": "content-text", "name": "Text", "type": "text"},
+        {"id": "content-btn", "name": "Call to Action", "type": "link", "data": {"href": "#/optin"} },
+
+
+        {"id": "footer", "name": "Footer", "type": "container"},
+        {"id": "footer-text", "name": "Text", "type": "text"}
+    ],
+    "form": {}
+}
