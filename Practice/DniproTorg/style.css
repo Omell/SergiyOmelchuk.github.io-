@@ -1,0 +1,36 @@
+body {
+   background:  url(images/background.jpg) repeat-y;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 900px;
+}
+.logo {
+    text-align: center;
+}
+
+.menu li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Gabriola;
+    font-size: 40px;
+    display: inline-block;
+    padding-right: 30px;
+
+}
+.content_mainPart {
+    float: left;
+    margin: 0 auto;
+    height: 400px;
+    width: 740px;
+    background: rgba(255,255,255, 0.7);
+    margin-right: 10px;
+}
+.content_rightBlock {
+    float: left;
+    margin: 0 auto;
+    height: 400px;
+    width: 150px;
+    background: rgba(255,255,255, 0.7);
+}
