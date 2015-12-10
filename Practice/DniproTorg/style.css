@@ -19,6 +19,7 @@ h1 {
 }
 .menu {
     margin-top: 0;
+    margin-bottom: 30px;
 }
 .menu ul {
     padding-left: 30px;
@@ -38,6 +39,7 @@ h1 {
     text-shadow: white 1px 0px, white 1px 1px, white 0px 1px, white -1px 1px, white -1px 0px,
     white -1px -1px, white 0px -1px, white 1px -1px;
 }
+
 .content {
     min-height: 400px;
     vertical-align: top;
@@ -53,7 +55,7 @@ h1 {
 
 }
 .content_mainPart {
-     vertical-align: top;
+    vertical-align: top;
     display: inline-block;
     min-height: 400px;
     margin: 0 auto;
@@ -76,7 +78,8 @@ h1 {
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     width: 100%;
-    margin-top: 20px;
+    height: 120px;
+    margin-top: 100px;
     box-sizing: border-box;
     font-size: 18px;
 }
@@ -89,6 +92,21 @@ h1 {
     position: absolute;
     top: 20px;
     left: 110px;
+}
+.footer p {
+    position: absolute;
+    right: 10px;
+    text-align: left;
+    line-height: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+.footer h5 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 75px;
+
 }
 .left {
     text-align: left;
@@ -111,7 +129,6 @@ h1 {
     font-size: 20px;
 }
 .products {
-    margin-bottom: 150px;
     margin-top: 50px;
 }
 .products_Item {
@@ -180,3 +197,38 @@ visibility: visible;
     text-decoration: underline;
 }
 
+.news_item {
+    margin-top: 20px;
+}
+.news_itemTextBlock {
+    display: inline-block;
+    height: 230px;
+    width: 650px;
+    text-align: justify;
+    font-size: 28px;
+    font-family: Gabriola;
+    line-height: 1.1em;
+    margin-right: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: rgba(255,255,255, 0.7);
+    vertical-align: top ;
+}
+.news_itemTextBlock span {
+    color: blue;
+    text-decoration: underline;
+}
+.news_itemImageBlock {
+    display: inline-block;
+    height: 230px;
+    width: 230px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: rgba(255,255,255, 0.7);
+    vertical-align: top;
+}
+.news_itemImageBlock img {
+    height: 145px;
+    width: 190px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
