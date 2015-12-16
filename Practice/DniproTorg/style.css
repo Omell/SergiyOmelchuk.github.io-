@@ -45,6 +45,15 @@ h1 {
     vertical-align: top;
     box-sizing: border-box;
 }
+.content_animal {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.content_animalimages {
+    display: inline-block;
+    opacity: 0.8;
+    margin: 0 20px;
+}
 .content_mainPart p {
     font-size: 30px;
     text-align: justify;

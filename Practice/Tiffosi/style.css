@@ -1,0 +1,115 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+.wrapper {
+    width: 480px;
+    height: 800px;
+    background-image: url("images/background.jpg");
+    overflow: hidden;
+}
+.content_style1 {
+    position: absolute;
+    z-index: 2;
+}
+.content_style2 {
+    position: absolute;
+    top: 360px;
+    left: -7px;
+    z-index: 1;
+}
+.header {
+    height: 150px;
+    box-sizing: border-box;
+}
+.content {
+    position: relative;
+    height: 500px;
+    box-sizing: border-box;
+}
+.content_productFoto {
+    position: absolute;
+    height: 500px;
+    left: 50px;
+    z-index: 2;
+}
+.content_productFotoRight {
+    position: absolute;
+    height: 300px;
+    top: -30px;
+    left: 250px;
+    z-index: 1;
+}
+.content_productFotoLeft {
+    position: absolute;
+    height: 300px;
+    top: -30px;
+    left: -145px;
+    z-index: 1;
+}
+.content_button {
+    background: white;
+    border-radius: 25px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    z-index: 4;
+}
+.content_hat {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+}
+.content_top {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    background: pink;
+}
+.content_bottom {
+    position: absolute;
+    top: 250px;
+    left: 5px;
+}
+.content_button:hover {
+    background: pink;
+}
+
+.footer {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    box-sizing: border-box;
+    border: 5px transparent;
+    border-radius: 30%;
+    z-index: 5;
+}
+.footer_leftButton {
+    position: absolute;
+    top: 37px;
+    left: 10px;
+}
+.footer_rightButton {
+    position: absolute;
+    top: 37px;
+    right: 10px;
+}
+.footer_button {
+    position: absolute;
+    left: 160px;
+    top: 70px;
+}
+.footer_text {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    line-height: 1em;
+}
+.footer_text span {
+ font-size: 20px;
+    line-height: 1em;
+}
