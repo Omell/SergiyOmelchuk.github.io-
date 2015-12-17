@@ -18,19 +18,30 @@ function Slider (selector, options) {
         }
         currentSlideIndex++;
     };
-    this.prevSlide = function () {
+    this.prevSlide = function (e) {
         if (currentSlideIndex===0) {
             currentSlideIndex=imagesCount - 1;
             return;
         }
         currentSlideIndex--;
     };
+
+
     this.__render = function () {
         sliderImagesNode.style.marginLeft = -(currentSlideIndex * slideSize) + 'px';
 
         paginationNode.querySelector('.active').classList.remove('active');
         paginationNode.children[currentSlideIndex].querySelector('a').classList.add('active');
     };
+
+    setInterval(function () {
+        if (currentSlideIndex=== imagesCount - 1) {
+            currentSlideIndex= -1;
+            return;
+        }
+        currentSlideIndex++;
+        __self.__render();
+    }, 6000);
 
 
     prevSliderNode.onclick = function () {

@@ -2,13 +2,16 @@
 
 
 body {
-   background:  url(images/background.jpg) repeat-y;
+    background:  url(../images/background.jpg) repeat-y;
     background-attachment: fixed;
     margin: 0 auto;
     padding: 0;
     text-align: center;
     width: 900px;
     font-family: 'Neucha', cursive;
+}
+.wrapper {
+    width: 900px;
 }
 h1 {
     font-family: 'Neucha', cursive;
@@ -48,11 +51,14 @@ h1 {
 .content_animal {
     width: 100%;
     margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
 }
 .content_animalimages {
     display: inline-block;
     opacity: 0.8;
-    margin: 0 20px;
+    margin-right: 44px;
 }
 .content_mainPart p {
     font-size: 30px;
