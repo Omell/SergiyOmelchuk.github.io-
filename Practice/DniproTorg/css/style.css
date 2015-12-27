@@ -230,10 +230,10 @@ visibility: visible;
     width: 100%;
 }
 .popup {
-    position: relative;
+    position: fixed;
     width: 900px;
-    height: 100%;
-    top: 0;
+    min-height: 900px;
+    top: 50px;
     left: 50%;
     margin-left: -450px;
     z-index: 5;
