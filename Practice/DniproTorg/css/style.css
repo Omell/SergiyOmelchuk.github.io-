@@ -222,7 +222,7 @@ visibility: visible;
 }
 #overlay {
     display: none;
-    background: rgba(255,255,255, 0.9);
+    background: rgba(30,30,30, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -232,7 +232,7 @@ visibility: visible;
 .popup {
     position: fixed;
     width: 900px;
-    top: 20px;
+    top: 50px;
     left: 50%;
     margin-left: -450px;
     z-index: 5;
@@ -253,6 +253,7 @@ visibility: visible;
 .popup_imageText {
     font-size: 30px;
     text-align: justify;
+    color: white;
 }
 .news_item {
     margin-top: 20px;
