@@ -1,0 +1,47 @@
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    background: black;
+}
+.wrapper {
+    background: url("bg.png") ;
+    margin-top: 50px;
+    height: 500px;
+    width: 900px;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.guntmans_images{
+
+    min-height: 1250px;
+
+}
+#gunman {
+    height: 225px;
+    width: 114.48px;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left: 900px;
+}
+#gunman img {
+    position: absolute;
+    left: 0;
+}
+.message {
+    position: absolute;
+    top: 70px;;
+    left: 450px;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: white;
+    border-radius: 15px;
+}
+#fire { visibility: hidden; }
+#won { visibility: hidden; }
+#lose { visibility: hidden; }

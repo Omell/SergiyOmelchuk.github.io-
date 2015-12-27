@@ -177,7 +177,7 @@ h1 {
     margin: 0;
     padding: 0;
 }
-.products_Item img {
+.products_itemImage {
     position: absolute;
     width: 255px;
     height: 165px;
@@ -205,13 +205,55 @@ h1 {
 .products_imageText p {
     margin: 0;
 }
-.products_Item:hover .products_imageText {
+.products_Item:hover .products_imageText  {
 visibility: visible;
+}
+.products_Item:hover .products_zoom  {
+    visibility: visible;
 }
 .products_Item h1:hover {
     text-decoration: underline;
 }
+.products_zoom {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    visibility: hidden;
+}
+#overlay {
+    display: none;
+    background: rgba(255,255,255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.popup {
+    position: fixed;
+    width: 900px;
+    top: 20px;
+    left: 50%;
+    margin-left: -450px;
+    z-index: 5;
+    visibility: hidden;
+}
+.popup_image {
+    border: white solid 2px;
 
+}
+.popup_close {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    background: red url("../images/close.png") center center no-repeat;
+    height: 40px;
+    width: 40px;
+}
+.popup_imageText {
+    font-size: 30px;
+    text-align: justify;
+}
 .news_item {
     margin-top: 20px;
 }

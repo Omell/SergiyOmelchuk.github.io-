@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+
+<ul id = 'ul'>
+</ul>
+
+<script>
+    //var li = document.createElement('li');
+    //parentElem.appendChild(elem);
+    while (true) {
+        var text = prompt("Введите текст для пункта списка", "111");
+
+        if (!text) {
+            break;
+        }
+        // var text = prompt("Введите текст для сообщения", "Жили были <a> и <b>!");
+
+        var li = document.createElement('li');
+        document.body.querySelector('ul').appendChild(li);
+        li.appendChild(document.createTextNode(text));
+    }
+</script>
+
+</body>
+</html>

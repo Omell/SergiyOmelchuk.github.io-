@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title></title>
+</head>
+<body>
+<div class="wrapper">
+    <div id="gunman" class="guntman"><img src="gunman.png" alt="" class="guntmans_images"/></div>
+    <p class="message" id="fire">FIRE !!!</p>
+    <p class="message" id="won">YOU WON !!!</p>
+    <p class="message" id="lose">YOU LOSE !!!</p>
+
+</div>
+    <script>
+        function action () {
+    var gunmanGoing;
+    var gunmanDvizh;
+    gunmanDvizh = setInterval(function gunmanD() {
+        var g = gunman.querySelector('img').offsetLeft;
+        if (g===0) {
+            gunman.querySelector('img').style.left = '-114px';
+        } else if (g===-114) {
+            gunman.querySelector('img').style.left = '-229px';
+        } else {gunman.querySelector('img').style.left = '0';}
+
+    }, 50);
+
+    gunmanGoing = setInterval(function gunmanGo() {
+        var go = +gunman.offsetLeft - 9;
+
+        gunman.style.left = go + 'px';
+
+    }, 100);
+
+    setTimeout(function() {
+        clearInterval(gunmanGoing);
+    }, 6000);
+    setTimeout(function() {
+        clearInterval(gunmanDvizh);
+    }, 6000);
+
+            setTimeout(function() {gunman.querySelector('img').style.left = '-344px';},6001);
+            var start = 8050;
+            var startTime;
+            var yourResult;
+            var gunmanTimeFire = 700;
+            var fireVisible = start;
+            var fireHidden = start + 300;
+
+            setTimeout(function() {fire.style.visibility = 'visible';
+                gunman.querySelector('img').style.left = '-686px';},fireVisible);
+            setTimeout(function() {startTime=new Date();},start);
+            setTimeout(function() {fire.style.visibility = '';},fireHidden);
+
+
+            gunman.onclick = function fireResult () {
+                var fireYourTime = new Date();
+                var time = fireYourTime - startTime;
+                alert(time);
+                yourResult=time;
+            };
+
+            setTimeout(function() {
+                alert(yourResult);
+                if (yourResult<gunmanTimeFire) {
+                    won.style.visibility = 'visible';
+                    gunman.querySelector('img').style.left = '-1142px';
+                } }, 9000);
+
+
+        }
+        action();
+    </script>
+
+</body>
+</html>
