@@ -232,8 +232,7 @@ visibility: visible;
 .popup {
     position: fixed;
     width: 900px;
-    min-height: 900px;
-    top: 50px;
+    top: 30px;
     left: 50%;
     margin-left: -450px;
     z-index: 5;
@@ -252,6 +251,11 @@ visibility: visible;
     width: 40px;
 }
 .popup_imageText {
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+    width: 900px;
+    background-color:  rgba(0, 0, 0, 0.7);
     font-size: 30px;
     text-align: justify;
     color: white;
