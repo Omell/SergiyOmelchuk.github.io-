@@ -68,9 +68,9 @@ function roundResult(e) {
         won.style.visibility = 'visible';
 
         /* ДВИЖЕНИЕ GUNMAN ПРИ ПРОИГРАШЕ */
-        gunman.querySelector('img').style.left = '-840px';
+            gunmanImage.style.left = '-840px';
         setTimeout(function () {
-            gunman.querySelector('img').style.left = '-960px';
+            gunmanImage.style.left = '-960px';
         }, 75);
         gunmanHat.style.visibility = 'visible';
         gunmanHat.style.top = '45px';
@@ -120,7 +120,7 @@ function roundResult(e) {
     }
         /* ДЕЙСТВИЯ В СЛУЧАЕ ПОРАЖЕНИЯ */
      else {
-        gunman.querySelector('img').style.left = '-1200px';
+        gunmanImage.style.left = '-1200px';
         lose.style.visibility = 'visible';
         lifeCounter--;
         mainPart.classList.add('loseGame');
@@ -228,10 +228,10 @@ function action () {
         }, 150);
         setTimeout(function () {
             gunman.querySelector('img').style.left = '-720px';
-        }, 300);
+        }, 225);
         setTimeout(function () {
             gunman.querySelector('img').style.left = '-360px';
-        }, 500);
+        }, 300);
 
         startTime = new Date();
         return;
