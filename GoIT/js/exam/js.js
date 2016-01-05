@@ -228,13 +228,14 @@ function action () {
         }, 150);
         setTimeout(function () {
             gunmanImage.style.left = '-720px';
-        }, 225);
+        }, 350);
         setTimeout(function () {
             gunmanImage.style.left = '-360px';
-        }, 300);
+        }, gunmanFireTime);
 
         /* ПОБЕДА ГАНМЕНА */
-        if (gunmanFireTime < playerResult) {
+        setTimeout( function () {
+        if (gunmanFireTime < playerResult || playerResult === 0 ) {
             gunmanImage.style.left = '-1200px';
             lose.style.visibility = 'visible';
             lifeCounter--;
@@ -249,7 +250,7 @@ function action () {
                     setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
             }, gunmanFireTime);
             /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
-    }
+    }}, gunmanFireTime);
         /* END ПОБЕДА ГАНМЕНА */
 
         startTime = new Date();
