@@ -158,7 +158,7 @@ h1 {
     position: relative;
     vertical-align: top;
     margin-bottom: 20px;
-
+    cursor: pointer;
 }
 .products_Item:nth-child(3) {
     margin-right: 0;
@@ -228,6 +228,7 @@ visibility: visible;
     left: 0;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 .popup {
     position: fixed;
@@ -259,6 +260,9 @@ visibility: visible;
     font-size: 30px;
     text-align: justify;
     color: white;
+    padding: 0 10px;
+    box-sizing: border-box;
+    line-height: 1em;
 }
 .news_item {
     margin-top: 20px;

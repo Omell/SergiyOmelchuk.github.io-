@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="logo"><img src="images/logo.png"  </div>
+<div class="logo"><img src="images/logo.png">  </div>
 <header class="menu">
     <ul>
     <a href="index.html"><li>Головна</li></a>
@@ -90,15 +90,15 @@
         </div>
     </div>
 
-    <div class="products_Item">
-            <img src="images/semimanufactures.jpg" class="products_itemImage"/>
-            <div><img src="images/zoom.png" alt="" class="products_zoom" onclick="popup(this)"/></div>
+    <div class="products_Item" onclick="popupOpen(this)">
+            <img src="images/semimanufactures.jpg" class="products_itemImage" />
+            <div><img src="images/zoom.png" alt="" class="products_zoom" /></div>
             <div class="products_imageText"><p>Дуже цікавий текст тут буде.
             Це може бути опис продукту чи якийсь смішний анекдот</p></div>
             <a href=""><h1>Власні напівфабрикати</h1></a>
         <div class="popup">
             <img src="images/semimanufactures.jpg" alt="" class="popup_image"/>
-            <a href="" class="popup_close"></a>
+            <p class="popup_close" onclick="popupClose(this)"></p>
             <div class="popup_imageText"><p>Дуже цікавий текст тут буде.
                 Це може бути опис продукту чи якийсь смішний анекдот</p></div>
         </div>
@@ -119,7 +119,7 @@
     <h5 class="center">ТОВ «ТД «ДНІПРО-торг» &copy; 2015</h5>
 </div>
 
-<a href=""><div id="overlay"></div></a>
+<div id="overlay"></div>
 <!--<div class="popup">
     <img src="images/pork_big.jpg" class="popup_image" alt=""/>
     <a href="" class="popup_close"></a>
@@ -147,14 +147,16 @@
         // то обработчик просто заканчивает работу
     };*/
 
-    function popup (e) {
-//        e.parentNode.classList.remove('products_Item');
-//        e.children[0].classList.remove('products_itemImage');
-//        e.parentNode.classList.add('popup');
-//        e.children[0].classList.add('popup_image');
-          e.parentNode.parentNode.children[4].style.visibility = 'visible';
-        overlay.style.display = 'block';
+    function popupOpen (e) {
+          e.children[4].style.visibility = 'visible';
+          overlay.style.display = 'block';
    };
+  function popupClose (e) {
+          e.parentNode.style.visibility = 'hidden';
+          alert('22');
+          overlay.style.display = 'none';
+          alert('2552');
+  };
 </script>
 
 </body>

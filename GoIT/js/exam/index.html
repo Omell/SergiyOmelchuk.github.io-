@@ -7,71 +7,31 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="gunman" class="guntman"><img src="gunman.png" alt="" class="guntmans_images"/></div>
-    <p class="message" id="fire">FIRE !!!</p>
-    <p class="message" id="won">YOU WON !!!</p>
-    <p class="message" id="lose">YOU LOSE !!!</p>
+    <div class="header">
+        <div class="header_counter"><div class="header_counterName">time.you: </div><div class="header_counterTime" id="playerTime">0.00</div></div>
+        <div class="header_counter"><div class="header_counterName">gunman: </div><div class="header_counterTime" id="gunmanTime">1.40</div></div>
+    </div>
+
+    <div  class="main" id="mainPart">
+        <div class="gunman_hat" id="gunmanHat"><img src="gunmanForGame2.png" id="gunmanHatImage" alt=""/></div>
+        <div id="gunman"><img src="gunmanForGame2.png" alt="" id="gunmanImage" /></div>
+        <p class="message" id="fire">FIRE !!!</p>
+        <p class="message" id="won">YOU WON !!!</p>
+        <p class="message" id="lose">YOU LOST !!!</p>
+        <p class="message" id="bonus">BONUS: </p>
+        <p class="message" id="gameResult">YOUR RESULT: </p>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer_block"><div id="score"><span>00000</span></div>SCORE</div>
+        <div class="footer_block"><div id="win">w. <span>0</span></div><div id="life">l. <span>3</span></div></div>
+        <div class="footer_block"><div id="rewards"><span>$ </span>0000</div>REWARDS</div>
+    </div>
 
 </div>
-    <script>
-        function action () {
-    var gunmanGoing;
-    var gunmanDvizh;
-    gunmanDvizh = setInterval(function gunmanD() {
-        var g = gunman.querySelector('img').offsetLeft;
-        if (g===0) {
-            gunman.querySelector('img').style.left = '-114px';
-        } else if (g===-114) {
-            gunman.querySelector('img').style.left = '-229px';
-        } else {gunman.querySelector('img').style.left = '0';}
+    <script src="js.js">
 
-    }, 50);
-
-    gunmanGoing = setInterval(function gunmanGo() {
-        var go = +gunman.offsetLeft - 9;
-
-        gunman.style.left = go + 'px';
-
-    }, 100);
-
-    setTimeout(function() {
-        clearInterval(gunmanGoing);
-    }, 6000);
-    setTimeout(function() {
-        clearInterval(gunmanDvizh);
-    }, 6000);
-
-            setTimeout(function() {gunman.querySelector('img').style.left = '-344px';},6001);
-            var start = 8050;
-            var startTime;
-            var yourResult;
-            var gunmanTimeFire = 700;
-            var fireVisible = start;
-            var fireHidden = start + 300;
-
-            setTimeout(function() {fire.style.visibility = 'visible';
-                gunman.querySelector('img').style.left = '-686px';},fireVisible);
-            setTimeout(function() {startTime=new Date();},start);
-            setTimeout(function() {fire.style.visibility = '';},fireHidden);
-
-
-            gunman.onclick = function fireResult () {
-                var fireYourTime = new Date();
-                var time = fireYourTime - startTime;
-                alert(time);
-                yourResult=time;
-            };
-
-            setTimeout(function() {
-                alert(yourResult);
-                if (yourResult<gunmanTimeFire) {
-                    won.style.visibility = 'visible';
-                    gunman.querySelector('img').style.left = '-1142px';
-                } }, 9000);
-
-
-        }
-        action();
     </script>
 
 </body>

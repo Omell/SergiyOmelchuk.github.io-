@@ -1,47 +1,113 @@
-
+@font-face {
+    font-family:"Nintendo";
+    src: url('font/Nintendoid1.ttf');
+    font-weight:normal;
+    font-style:normal;
+}
 * {
     margin: 0 auto;
     padding: 0;
 }
 body {
-    background: black;
+    font-family: "Nintendo";
+}
+.visiability {
+    visibility: hidden;
 }
 .wrapper {
-    background: url("bg.png") ;
-    margin-top: 50px;
-    height: 500px;
     width: 900px;
+}
+.main {
+    background: url("bg.png") no-repeat 100% ;
+    height: 455px;
     background-size: 100%;
     position: relative;
     overflow: hidden;
 }
-.guntmans_images{
-
-    min-height: 1250px;
-
+.loseGame {
+    background-image: url("bgLose.png");
 }
+.header {
+    padding: 10px;
+    background: black;
+    color: green;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    text-align: left;
+}
+.header_counterName {
+    display: inline-block;
+    width: 220px;
+    padding: 7px;
+    border: green 2px solid;
+    border-radius: 7px;
+    margin-left: 250px;
+    margin-bottom: 10px ;
+}
+.header_counterTime {
+    display: inline-block;
+    margin-left: 20px;
+}
+
 #gunman {
     height: 225px;
-    width: 114.48px;
+    width: 120px;
     overflow: hidden;
     position: absolute;
     top: 150px;
     left: 900px;
 }
-#gunman img {
+#gunmanImage {
     position: absolute;
     left: 0;
+    9top: -225px;
+    transform: ;
+}
+#gunmanHat {
+    position: absolute;
+    height: 225px;
+    width: 120px;
+    top: -50px;
+    left: 400px;
+    transition:  top 3s cubic-bezier(.3, -1, .7, 1);
+    visibility: hidden;
+    overflow: hidden;
+}
+#gunmanHatImage {
+    position: absolute;
+    left: -1080px;
 }
 .message {
     position: absolute;
-    top: 70px;;
-    left: 450px;
+    top: 50px;;
+    left: 250px;
     font-size: 30px;
     padding: 10px 20px;
     border: 2px solid white;
     background: white;
     border-radius: 15px;
+    text-align: center;
+    visibility: hidden;
 }
-#fire { visibility: hidden; }
-#won { visibility: hidden; }
-#lose { visibility: hidden; }
+#bonus {
+    min-width: 330px;
+    text-align: left;
+}
+
+.footer {
+    padding: 30px;
+    background: black;
+    color: green;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+}
+.footer_block span {
+    color: white;
+}
+.footer_block {
+    display: inline-block;
+    margin-left: 75px;
+    line-height: 1.2em;
+}
