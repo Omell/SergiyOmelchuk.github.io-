@@ -1,9 +1,10 @@
 var lifeCounter=3;
 var scoreCounter=0;
 var winCounter = 0;
-var gunmanFireTime = 1600;
+var gunmanFireTime;
 var startTime=new Date();
 var rewardsValue;
+var side;
 
 function gunmanMoveRight () {
     var go = +gunman.offsetLeft - 10;
@@ -22,15 +23,15 @@ function gunmanMoveRight () {
 function gunmanMoveLeft () {
     gunmanImage.style.transform = 'scale(-1, 1)';
 
-    var go = +gunman.offsetLeft + 8;
+    var go = +gunman.offsetLeft + 10;
     gunman.style.left = go + 'px';
 
     var u = gunmanImage.offsetLeft;
     if (u === -1080) {
-        gunmanImage.style.left = '-1320px';
-    } else if (u === -1320) {
         gunmanImage.style.left = '-1200px';
     } else if (u === -1200) {
+        gunmanImage.style.left = '-960px';
+    } else if (u === -960) {
         gunmanImage.style.left = '-1080px';
     } else {gunmanImage.style.left = '-1080px';}
 }
@@ -72,7 +73,7 @@ function roundResult(e) {
             gunman.querySelector('img').style.left = '-960px';
         }, 75);
         gunmanHat.style.visibility = 'visible';
-        gunmanHat.style.top = '95px';
+        gunmanHat.style.top = '45px';
         /* END ДВИЖЕНИЕ GUNMAN ПРИ ПРОИГРАШЕ */
 
         /* ПОДСЧЕТ И ВЫВОД НА ЕКРАН БОНУСОВ И ОЧКОВ ЗА ПОБЕДУ */
@@ -110,8 +111,11 @@ function roundResult(e) {
         mainPart.classList.add('loseGame');
 
         /* ДВИЖЕНИЕ GUNMAN - УХОДИТ */
-            var gunmanMove = setInterval(gunmanMoveLeft , 100);
+        if (side==='right') {
+        var gunmanMove = setInterval(gunmanMoveLeft , 100);
             setTimeout(function () { clearInterval(gunmanMove);}, 5100);
+        } else {var gunmanMove = setInterval(gunmanMoveRight , 100);
+            setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
         /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
     }
         /* ДЕЙСТВИЯ В СЛУЧАЕ ПОРАЖЕНИЯ */
@@ -122,8 +126,13 @@ function roundResult(e) {
         mainPart.classList.add('loseGame');
 
         /* ДВИЖЕНИЕ GUNMAN - УХОДИТ */
-        var gunmanMove = setInterval(gunmanMoveLeft , 100);
-        setTimeout(function () { clearInterval(gunmanMove);}, 5100);
+        setTimeout(function () {
+            if (side==='right') {
+                var gunmanMove = setInterval(gunmanMoveLeft , 100);
+                setTimeout(function () { clearInterval(gunmanMove);}, 5100);
+            } else {var gunmanMove = setInterval(gunmanMoveRight , 100);
+                setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
+        }, 1500);
         /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
     }
     /* END ОПРЕДЕЛЕНИЕ РЕЗУЛЬТАТОВ РАУНДА */
@@ -133,31 +142,36 @@ function roundResult(e) {
     life.innerHTML = 'l. <span>' + lifeCounter + '</span>';
 }
 
+
+
+
 function action () {
 
     var playerResult=0;
     var startDuel = 8050;
 
     /* НАЧАЛЬНЫЕ УСТАНОВКИ */
-    var side ='left';
-    var rand
-    function randomInteger() {
-        rand = 1 - 0.5 + Math.random() * (2 - 1 + 1);
-        rand = Math.round(rand);
-        return rand;
-    }
-    alert(rand);
+    var gunmansQuality = 5; // количество возможных Ганменов
     fire.style.visibility = '';
     gunman.style.left = '900px';
     bonus.style.visibility = '';
     lose.style.visibility = '';
     gunmanHat.style.visibility = '';
     gunman.querySelector('img').style.left = '0';
-    gunmanHat.style.top = '-50px';
+    gunmanHat.style.top = '-100px';
     playerTime.innerHTML = '0.00';
     mainPart.classList.remove('loseGame');
     gunmanImage.style.transform = '';
     /* END НАЧАЛЬНЫЕ УСТАНОВКИ */
+
+    /* ОПРЕДЕЛЕНИЕ СТОРОНЫ ВЫХОДА И ГАНМЕНА КОТОРЫЙ ВЫХОДИТ */
+    gunmanCurrent = Math.ceil((Math.random() * gunmansQuality))*225 - 225;
+    gunmanImage.style.top = '-' + gunmanCurrent + 'px';
+    gunmanHatImage.style.top = '-' + gunmanCurrent + 'px';
+    var sideRandom = Math.random();
+    if (sideRandom>0.5) {side='left';}
+    else {side='right';}
+
 
     /* ВРЕМЯ ВЫСТРЕЛА GUNMANA В ЗАВИСИМОСТИ ОТ ПРОЙДЕННОГО УРОВНЯ (С КАЖДЫМ 5 РАУНДОМ СЛОЖНОСТЬ УВЕЛИЧИВАЕТСЯ) */
     if (winCounter < 5 ) {
@@ -183,10 +197,11 @@ function action () {
     /* ДВИЖЕНИЕ GUNMAN - ВЫХОД НА ЦЕНТР */
 
     if (side=== 'right') {
+        gunman.style.left = '900px';
     var gunmanMove = setInterval(gunmanMoveRight, 100);
     setTimeout(function () {  clearInterval(gunmanMove); }, 5100);
     } else if (side==='left') {
-        gunman.style.left = '0px';
+        gunman.style.left = '-100px';
         var gunmanMove = setInterval(gunmanMoveLeft, 100);
         setTimeout(function () {  clearInterval(gunmanMove); }, 5100);
     }
