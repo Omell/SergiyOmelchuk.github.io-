@@ -237,7 +237,7 @@ function action () {
 
         /* ПОБЕДА ГАНМЕНА */
         setTimeout( function () {
-        if (gunmanFireTime < playerResult || playerResult === 0 ) {
+        if ( playerResult === 0 ) {
             gunmanImage.style.left = '-1200px';
             lose.style.visibility = 'visible';
             lifeCounter--;
@@ -267,7 +267,7 @@ function action () {
 
 function duel () {
     action();
-setInterval(function() {if(lifeCounter>0){action();}
+setInterval(function() {if(lifeCounter>=0){action();}
 else{ gameResult.style.visibility = 'visible';
     gameResult.innerHTML = '<br/>YOUR RESULT:<br/><br/>' + scoreCounter +'<br/><br/>THE END<br/>';
 }},15000);
