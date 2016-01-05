@@ -5,6 +5,7 @@ var gunmanFireTime;
 var startTime=new Date();
 var rewardsValue;
 var side;
+var playerResult;
 
 function gunmanMoveRight () {
     var go = +gunman.offsetLeft - 10;
@@ -147,11 +148,12 @@ function roundResult(e) {
 
 function action () {
 
-    var playerResult=0;
+
     var startDuel = 8050;
 
     /* НАЧАЛЬНЫЕ УСТАНОВКИ */
     var gunmansQuality = 5; // количество возможных Ганменов
+    playerResult=0;
     fire.style.visibility = '';
     gunman.style.left = '900px';
     bonus.style.visibility = '';
@@ -228,10 +230,10 @@ function action () {
         }, 150);
         setTimeout(function () {
             gunmanImage.style.left = '-720px';
-        }, 350);
+        }, 250);
         setTimeout(function () {
             gunmanImage.style.left = '-360px';
-        }, gunmanFireTime);
+        }, 300);
 
         /* ПОБЕДА ГАНМЕНА */
         setTimeout( function () {
