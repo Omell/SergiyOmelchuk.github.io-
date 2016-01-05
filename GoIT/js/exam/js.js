@@ -139,6 +139,14 @@ function action () {
     var startDuel = 8050;
 
     /* НАЧАЛЬНЫЕ УСТАНОВКИ */
+    var side ='left';
+    var rand
+    function randomInteger() {
+        rand = 1 - 0.5 + Math.random() * (2 - 1 + 1);
+        rand = Math.round(rand);
+        return rand;
+    }
+    alert(rand);
     fire.style.visibility = '';
     gunman.style.left = '900px';
     bonus.style.visibility = '';
@@ -173,11 +181,11 @@ function action () {
     gunmanTime.innerHTML = (gunmanFireTime / 1000).toFixed(1) +'0';
 
     /* ДВИЖЕНИЕ GUNMAN - ВЫХОД НА ЦЕНТР */
-    var side = 'left';
+
     if (side=== 'right') {
     var gunmanMove = setInterval(gunmanMoveRight, 100);
     setTimeout(function () {  clearInterval(gunmanMove); }, 5100);
-    } else if (side='left') {
+    } else if (side==='left') {
         gunman.style.left = '0px';
         var gunmanMove = setInterval(gunmanMoveLeft, 100);
         setTimeout(function () {  clearInterval(gunmanMove); }, 5100);
