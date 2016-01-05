@@ -222,19 +222,19 @@ function action () {
     /* НАЧАЛО РАУНДА */
     setTimeout(function () {
         fire.style.visibility = 'visible';
-        gunman.querySelector('img').style.left = '-480px';
+        gunmanImage.style.left = '-480px';
         setTimeout(function () {
-            gunman.querySelector('img').style.left = '-600px';
+            gunmanImage.style.left = '-600px';
         }, 150);
         setTimeout(function () {
-            gunman.querySelector('img').style.left = '-720px';
+            gunmanImage.style.left = '-720px';
         }, 225);
         setTimeout(function () {
-            gunman.querySelector('img').style.left = '-360px';
+            gunmanImage.style.left = '-360px';
         }, 300);
 
         /* ПОБЕДА ГАНМЕНА */
-        setTimeout(function () {
+        if (gunmanFireTime < playerResult) {
             gunmanImage.style.left = '-1200px';
             lose.style.visibility = 'visible';
             lifeCounter--;
@@ -249,8 +249,7 @@ function action () {
                     setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
             }, gunmanFireTime);
             /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
-
-        }, 1500);
+    }
         /* END ПОБЕДА ГАНМЕНА */
 
         startTime = new Date();
