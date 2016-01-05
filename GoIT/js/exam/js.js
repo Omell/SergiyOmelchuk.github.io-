@@ -233,9 +233,30 @@ function action () {
             gunman.querySelector('img').style.left = '-360px';
         }, 300);
 
+        /* ПОБЕДА ГАНМЕНА */
+        setTimeout(function () {
+            gunmanImage.style.left = '-1200px';
+            lose.style.visibility = 'visible';
+            lifeCounter--;
+            mainPart.classList.add('loseGame');
+
+            /* ДВИЖЕНИЕ GUNMAN - УХОДИТ */
+            setTimeout(function () {
+                if (side==='right') {
+                    var gunmanMove = setInterval(gunmanMoveLeft , 100);
+                    setTimeout(function () { clearInterval(gunmanMove);}, 5100);
+                } else {var gunmanMove = setInterval(gunmanMoveRight , 100);
+                    setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
+            }, gunmanFireTime);
+            /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
+
+        }, 1500);
+        /* END ПОБЕДА ГАНМЕНА */
+
         startTime = new Date();
         return;
     }, startDuel);
+
     return;
 }
 
