@@ -251,6 +251,7 @@ function action () {
                 } else {var gunmanMove = setInterval(gunmanMoveRight , 100);
                     setTimeout(function () { clearInterval(gunmanMove);}, 5100);}
             }, gunmanFireTime);
+            life.innerHTML = 'l. <span>' + lifeCounter + '</span>';
             /* END ДВИЖЕНИЕ GUNMAN - УХОДИТ */
     }}, gunmanFireTime);
         /* END ПОБЕДА ГАНМЕНА */
@@ -261,14 +262,6 @@ function action () {
 
     return;
 }
-
-var gunmanPrototype  = {
-    startDuel: 8050,
-    side: 'right'
-};
-var gunmansQuality = 5;
-var side44 = ['left', 'right'];
-
 
 
 
