@@ -1,6 +1,6 @@
 <?php
 if (isset ($_POST['contactFF'])) {
-  $to = "name@yandex.ru"; // поменять на свой электронный адрес
+  $to = "om.sergiy@gmail.com"; // поменять на свой электронный адрес
   $from = $_POST['contactFF'];
   $subject = "Заполнена контактная форма с ".$_SERVER['HTTP_REFERER'];
   $message = "Имя: ".$_POST['nameFF']."\nEmail: ".$from."\nIP: ".$_SERVER['REMOTE_ADDR']."\nСообщение: ".$_POST['messageFF'];
