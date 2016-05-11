@@ -50,67 +50,6 @@
 			font-family: Arvo; /* Имя шрифта */
 			src: url(fonts/ArvoRegular.ttf); /* Путь к файлу со шрифтом */
 		}
-
-
-		#feedback-form {
-			max-width: 550px;
-			padding: 2%;
-			border-radius: 3px;
-			background: #f1f1f1;
-		}
-		#feedback-form label {
-			float: left;
-			display: block;
-			clear: right;
-		}
-		#feedback-form .w100 {
-			float: right;
-			max-width: 400px;
-			width: 97%;
-			margin-bottom: 1em;
-			padding: 1.5%;
-		}
-		#feedback-form .border {
-			border-radius: 1px;
-			border-width: 1px;
-			border-style: solid;
-			border-color: #C0C0C0 #D9D9D9 #D9D9D9;
-			box-shadow: 0 1px 1px rgba(255,255,255,.5), 0 1px 1px rgba(0,0,0,.1) inset;
-		}
-		#feedback-form .border:focus {
-			outline: none;
-			border-color: #abd9f1 #bfe3f7 #bfe3f7;
-		}
-		#feedback-form .border:hover {
-			border-color: #7eb4ea #97cdea #97cdea;
-		}
-		#feedback-form .border:focus::-moz-placeholder {
-			color: transparent;
-		}
-		#feedback-form .border:focus::-webkit-input-placeholder {
-			color: transparent;
-		}
-		#feedback-form .border:not(:focus):not(:hover):valid {
-			opacity: .8;
-		}
-		#submitFF {
-			padding: 2%;
-			border: none;
-			border-radius: 3px;
-			box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;
-			background: #669acc;
-			color: #fff;
-		}
-		#feedback-form br {
-			height: 0;
-			clear: both;
-		}
-		#submitFF:hover {
-			background: #5c90c2;
-		}
-		#submitFF:focus {
-			box-shadow: 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
-		}
 	</style>
 
 
@@ -282,41 +221,6 @@
 								<br/>
 								ФОРМА
 								<br/>
-
-                            <form enctype="multipart/form-data" method="post" id="feedback-form">
-                                <label for="nameFF">Имя:</label>
-                                <input type="text" name="nameFF" id="nameFF" required placeholder="например, Иван Иванович Иванов" x-autocompletetype="name" class="w100 border">
-                                <label for="contactFF">Email:</label>
-                                <input type="email" name="contactFF" id="contactFF" required placeholder="например, ivan@yandex.ru" x-autocompletetype="email" class="w100 border">
-                                <label for="fileFF">Прикрепить файл:</label>
-                                <input type="file" name="fileFF" multiple id="fileFF" class="w100">
-                                <label for="messageFF">Сообщение:</label>
-                                <textarea name="messageFF" id="messageFF" required rows="5" placeholder="Детали заявки…" class="w100 border"></textarea>
-                                <br>
-                                <input value="Отправить" type="submit" id="submitFF">
-                            </form>
-
-                            <script>
-                                document.getElementById('feedback-form').addEventListener('submit', function(evt){
-                                    var http = new XMLHttpRequest(), f = this;
-                                    evt.preventDefault();
-                                    http.onload = function () {alert(this.responseText);}
-                                    http.open("POST", "SergiyOmelchuk.github.io/Practice/SofiaTommi/contacts.php", true);
-                                    http.onreadystatechange = function() {
-                                        if (http.readyState == 4 && http.status == 200) {
-                                            alert(http.responseText);
-                                            if (http.responseText.indexOf(f.nameFF.value) == 0) { // очистить поле сообщения, если в ответе первым словом будет имя отправителя
-                                                f.messageFF.removeAttribute('value');
-                                                f.messageFF.value='';
-                                            }
-                                        }
-                                    }
-                                    http.onerror = function() {
-                                        alert('Извините, данные не были переданы');
-                                    }
-                                    http.send(new FormData(f));
-                                }, false);
-                            </script>
 
 
 							</p>
@@ -635,7 +539,71 @@
 			</div>
 		</section>
 
+		<!-- RSVP SECTION -->
+		<section id="rsvp-section">
 
+			<div class="container">
+
+				<!-- ROW-1 -->
+				<div class="row">
+
+					<!-- SECTION TITLE -->
+					<div class="col-md-offset-2 col-md-8 text-center">
+
+						<div class="section-title animation fadeInUp">
+							<h2>
+								ПІДТВЕРДЖЕННЯ УЧАСТІ
+							</h2>
+
+							<p>
+								Напишіть будь ласка як і коли ви збираєтесь приїхати. Якщо є питання з приводу трансферу, проживання чи чогось іншого - пишіть
+							</p>
+
+
+						</div>
+					</div>
+				</div> <!-- END of ROW-1 -->
+
+				<!-- FORM -->
+				<div class="row">
+					<div id="message" class="col-md-12 message"> <!-- Show Message --> </div>
+
+					<form method="post" action="rsvp.php" id="rsvpform">
+						<div class="col-md-6">
+							<div id="fullname" class="form-group">
+								<label for="inputname">*ІМ"Я</label>
+								<input type="text" class="form-control ajax-input" id="inputname" placeholder="" data-required="Name Required" data-output-label="Output Name">
+							</div>
+							<div id="email" class="form-group">
+								<label for="inputemail">*EMAIL</label>
+								<input type="email" class="form-control ajax-input" id="inputemail" placeholder="" data-required="Email Required" data-output-label="Output Email">
+							</div>
+							<div id="events" class="form-group">
+								<label for="inputevents">*Я БУДУ ПРИСУТНІЙ:</label>
+								<select multiple id="inputevents" class="form-control ajax-input" data-required="Please Select Events" data-output-label="Output Events">
+									<option>ЗАГС</option>
+									<option>Вінчання</option>
+									<option>Ресторан</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputmessage">ЗАЛИШТЕ СВОЄ ПОВІДОМЛЕННЯ</label>
+								<textarea id="inputmessage" class="form-control ajax-input" rows="14" data-output-label="Output Message"></textarea>
+							</div>
+						</div>
+						<div class="col-md-12 text-center">
+							<div class="form-group">
+								<input type="submit" id="submitButton"  name="submitButton" class="button medium reverse" value="SUBMIT">
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+		</section>
 
 		<!--CONTENT SECTION-->
         <section id="content">
