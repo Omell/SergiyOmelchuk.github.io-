@@ -300,6 +300,7 @@
                                 document.getElementById('feedback-form').addEventListener('submit', function(evt){
                                     var http = new XMLHttpRequest(), f = this;
                                     evt.preventDefault();
+                                    http.onload = function () {alert(this.responseText);}
                                     http.open("POST", "SergiyOmelchuk.github.io/Practice/SofiaTommi/contacts.php", true);
                                     http.onreadystatechange = function() {
                                         if (http.readyState == 4 && http.status == 200) {
